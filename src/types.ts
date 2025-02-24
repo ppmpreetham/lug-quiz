@@ -5,6 +5,5 @@ export interface Question{
 }
   
 export interface Quiz{
-    questions: Question[],
-    correctAnswers: number
+    question: Question[],
 }
