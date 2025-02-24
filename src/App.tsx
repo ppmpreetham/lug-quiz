@@ -1,6 +1,7 @@
-import Option from "./components/Option"
 import {Question} from "./types"
 import QuestionComp from "./components/Question"
+import Nav from "./components/Nav"
+import FetchProfilePicture from "./utils/FetchProfilePicture"
 // Multiple questions
 
 const questions: Question[] = [
@@ -33,7 +34,9 @@ const getLatestQuestion = (questions: Question[]): Question => {
 function App() {
   return (
     <>
+      <FetchProfilePicture username={"ppmpreetham"}/>
       <div className="h-screen w-screen bg-black">
+        <Nav />
         <QuestionComp qn={getLatestQuestion(questions).question} options={getLatestQuestion(questions).options}/>
       </div>
     </>

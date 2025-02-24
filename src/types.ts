@@ -7,3 +7,8 @@ export interface Question{
 export interface Quiz{
     question: Question[],
 }
+
+export interface Profile{
+    username: string,
+    
+}
