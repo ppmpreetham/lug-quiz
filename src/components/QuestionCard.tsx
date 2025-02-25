@@ -1,4 +1,4 @@
-import { Question } from '../types';
+import { Question } from "../types";
 
 const QuestionCard = ({ question }: { question: Question }) => {
   return (
@@ -6,11 +6,17 @@ const QuestionCard = ({ question }: { question: Question }) => {
       <h2>{question.question}</h2>
       <ul>
         {question.options.map((option, index) => (
-          <li key={index}>{option}</li>
+          <div>
+            <li
+              key={index}
+              className={`border border-white p-2 my-4 ${question.answer !== undefined && question.answer + 1 === index ? "bg-green-600 text-black" : ""}`}
+            >
+              {option}
+            </li>
+          </div>
         ))}
       </ul>
-      <p>Answer: {question.answer.join(', ')}</p>
-      <p>Date: {question.date}</p>
+      <p className="text-xl">{question.explanation}</p>
     </div>
   );
 };
