@@ -4,6 +4,7 @@ import QuestionComp from "./components/Question";
 import Nav from "./components/Nav";
 import QuestionGrid from "./components/QuestionGrid";
 import Leaderboard from "./components/Leaderboard";
+import Profile from "./components/Profile";
 
 // Multiple questions
 const questions: Question[] = [
@@ -66,6 +67,7 @@ function App() {
             element={<QuestionGrid questions={questions} />}
           />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </Router>

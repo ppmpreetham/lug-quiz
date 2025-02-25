@@ -22,7 +22,7 @@ const QuestionComp = ({
       <div className="text-4xl text-center">{qn}</div>
       <div className="flex flex-col gap-4">
         {options.map((option, index) => (
-          <div onClick={() => handleOptionClick(index)}>
+          <div key={index} onClick={() => handleOptionClick(index)}>
             <Option
               option={option}
               no={index + 1}
