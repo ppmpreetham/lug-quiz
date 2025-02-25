@@ -1,7 +1,9 @@
+import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 
 const Profile = () => {
+  const [profileData, setProfileData] = useState(null);
   const axiosInstance = axios.create({
     baseURL: "https://i.instagram.com/",
     headers: {
@@ -11,7 +13,7 @@ const Profile = () => {
       "Accept-Language": "en-US,en;q=0.9,ru;q=0.8",
       "Accept-Encoding": "gzip, deflate, br",
       Accept: "*/*",
-      "x-ig-app-id": "", // API KEY
+      "x-ig-app-id": "", // API KEY GOES HERE
     },
   });
 
@@ -20,8 +22,8 @@ const Profile = () => {
       const response = await axiosInstance.get(
         `/api/v1/users/web_profile_info/?username=${username}`
       );
-      console.log(response.data);
-      const profileData = response;
+      setProfileData(response.data);
+      console.log(profileData);
     };
 
     fetchData("instagram");
@@ -31,9 +33,9 @@ const Profile = () => {
       <h2>PROFILE</h2>
       {profileData && (
         <>
-          <h4 className="text-4xl">{profileData.data.user.full_name}</h4>
-          <h4 className="text-xl">{profileData.data.user.biography}</h4>
-          <h4 className="text-xl">{profileData.data.user.pronouns}</h4>
+          <h4 className="text-4xl">{profileData.user.full_name}</h4>
+          <h4 className="text-xl">{profileData.user.biography}</h4>
+          <h4 className="text-xl">{profileData.user.pronouns}</h4>
           <h4 className="text-2xl">Rank:{}</h4>
           <h4 className="text-2xl">Points:{}</h4>
         </>
