@@ -1,11 +1,8 @@
 export interface Question{
     question: string,
     options: string[],
-    answer?: string[]
-}
-  
-export interface Quiz{
-    question: Question[],
+    answer?: string[],
+    date: string
 }
 
 export interface Profile{
