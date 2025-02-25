@@ -1,11 +1,12 @@
 export interface Question{
     question: string,
     options: string[],
-    answer?: string[],
-    date: string
+    answer?: number,
+    date: string,
+    explanation?: string,
+    difficulty?: string,
 }
 
 export interface Profile{
     username: string,
-    
 }
