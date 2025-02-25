@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Question } from "./types";
 import QuestionComp from "./components/Question";
 import Nav from "./components/Nav";
-import QuestionCard from "./components/QuestionCard";
 import QuestionGrid from "./components/QuestionGrid";
+import Leaderboard from "./components/Leaderboard";
 
 // Multiple questions
 const questions: Question[] = [
@@ -65,6 +65,7 @@ function App() {
             path="/questions"
             element={<QuestionGrid questions={questions} />}
           />
+          <Route path="/leaderboard" element={<Leaderboard />} />
         </Routes>
       </div>
     </Router>

@@ -7,6 +7,8 @@ export interface Question {
   difficulty?: string;
 }
 
-export interface Profile {
+export interface User {
   username: string;
+  points: number;
+  rank: number;
 }
