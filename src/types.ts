@@ -1,14 +1,18 @@
+// TOMORROW: WILL BE SHOWN THE DAY AFTER THAT. ELSE RETURN NULL
+
 export interface Question {
   question: string;
   options: string[];
-  answer?: number;
+  answer?: number; // 1,2,3,4 TOMORROW
   date: string;
-  explanation?: string;
-  difficulty?: string;
+  explanation?: string; // TOMORROW
+  difficulty?: string; // TOMORROW
 }
 
 export interface User {
-  username: string;
-  points: number;
-  rank: number;
+  name: string; // INPUT
+  regNo: string; // INPUT
+  username: string; // INPUT
+  points: number; // OUTPUT
+  rank: number; // OUTPUT
 }
