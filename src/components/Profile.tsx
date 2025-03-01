@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import SignInSignUp from "./SignInSignUp";
 
 const Profile = () => {
   const [profileData, setProfileData] = useState(null);
@@ -29,9 +30,10 @@ const Profile = () => {
     fetchData("instagram");
   }, []);
   return (
-    <div className="text-white px-36 text-6xl">
+    <div className="text-white px-3 lg:px-36 text-6xl flex flex-col gap-3">
       <h2>PROFILE</h2>
-      {profileData && (
+      <SignInSignUp />
+      {/* {profileData && (
         <>
           <h4 className="text-4xl">{profileData.user.full_name}</h4>
           <h4 className="text-xl">{profileData.user.biography}</h4>
@@ -39,7 +41,7 @@ const Profile = () => {
           <h4 className="text-2xl">Rank:{}</h4>
           <h4 className="text-2xl">Points:{}</h4>
         </>
-      )}
+      )} */}
     </div>
   );
 };
