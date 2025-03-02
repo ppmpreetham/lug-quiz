@@ -37,8 +37,8 @@ const QuestionComp = ({
           </div>
         ))}
       </div>
-      <button className="h-auto w-4/5 text-4xl items-center bg-green-500 text-black text-center py-2 mt-4 mx-auto hover:bg-white hover:cursor-pointer">
-        Submit
+      <button className="h-auto w-4/5 text-4xl items-center bg-better-green text-black text-center py-2 mt-4 mx-auto hover:bg-white hover:cursor-pointer">
+        SUBMIT
       </button>
     </div>
   );

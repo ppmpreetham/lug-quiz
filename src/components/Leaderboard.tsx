@@ -27,7 +27,7 @@ const Leaderboard = () => {
 
   return (
     <div className="text-white p-4 sm:px-8 lg:px-32">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl mb-4 text-green-500">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl mb-4 text-better-green">
         LEADERBOARD
       </h1>
       <div className="overflow-x-auto">

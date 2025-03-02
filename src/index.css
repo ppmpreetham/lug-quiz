@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-enigma-green: #23ec08;
+  --color-better-green: #c0ff00;
 }
 
 @font-face {

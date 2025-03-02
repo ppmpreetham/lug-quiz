@@ -61,23 +61,23 @@ const SignInSignUp: React.FC = () => {
 
   return (
     <div className="flex justify-center min-h-screen text-2xl w-full items-start uppercase">
-      <div className="w-full max-w-md bg-black border-2 border-green-500">
+      <div className="w-full max-w-md bg-black border-2 border-better-green">
         <div className="flex">
           <button
-            className={`w-1/2 py-3 text-center ${
+            className={`w-1/2 py-3 text-center border-b-2 border-better-green ${
               isSignIn
-                ? "bg-green-500 text-white border-green-500"
-                : "bg-black text-green-500 hover:cursor-pointer"
+                ? "bg-better-green text-black border-better-green"
+                : "bg-black text-better-green hover:cursor-pointer"
             }`}
             onClick={() => setIsSignIn(true)}
           >
             Sign In
           </button>
           <button
-            className={`w-1/2 py-3 text-center ${
+            className={`w-1/2 py-3 text-center border-b-2 border-better-green ${
               !isSignIn
-                ? "bg-green-500 text-white "
-                : "bg-black text-green-500 hover:cursor-pointer"
+                ? "bg-better-green text-black"
+                : "bg-black text-better-green hover:cursor-pointer"
             }`}
             onClick={() => setIsSignIn(false)}
           >
@@ -88,45 +88,50 @@ const SignInSignUp: React.FC = () => {
         <div className="p-8 text-2xl">
           {isSignIn ? (
             <>
-              <h2 className="text-2xl font-bold text-green-700 mb-6">
+              <h2 className="text-2xl font-bold text-better-green mb-6">
                 Welcome Back
               </h2>
               <form onSubmit={handleSignInSubmit}>
                 <div className="mb-4">
-                  <label className="block text-green-700 mb-2">Email</label>
+                  <label className="block text-better-green mb-2">Email</label>
                   <input
                     type="email"
                     name="email"
                     value={signInData.email}
                     onChange={handleSignInChange}
-                    className="w-full p-3 border-2 border-green-500 focus:border-green-700 focus:outline-none bg-black text-white"
+                    className="w-full p-3 border-2 border-better-green focus:border-better-green focus:outline-none bg-black text-white"
                     required
                   />
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-green-700 mb-2">Password</label>
+                  <label className="block text-better-green mb-2">
+                    Password
+                  </label>
                   <input
                     type="password"
                     name="password"
                     value={signInData.password}
                     onChange={handleSignInChange}
-                    className="w-full p-3 border-2 border-green-500 focus:border-green-700 focus:outline-none bg-black text-white"
+                    className="w-full p-3 border-2 border-better-green focus:border-better-green focus:outline-none bg-black text-white"
                     required
                   />
                 </div>
 
                 <div className="flex justify-end mb-6">
-                  <a href="#" className="text-green-700 hover:text-green-800">
+                  <a
+                    href="#"
+                    className="text-better-green hover:underline hover:cursor-pointer"
+                  >
                     Forgot password?
                   </a>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-green-500 text-white p-3 hover:bg-green-700 hover:cursor-pointer"
+                  className="w-full bg-better-green text-black p-3 hover:bg-white hover:cursor-pointer"
                 >
-                  Sign In
+                  SIGN IN
                 </button>
 
                 <div className="text-center mt-4">
@@ -135,7 +140,7 @@ const SignInSignUp: React.FC = () => {
                     <button
                       type="button"
                       onClick={handleToggle}
-                      className="text-green-700 hover:text-green-800"
+                      className="text-better-green hover:underline hover:cursor-pointer"
                     >
                       Sign Up
                     </button>
@@ -145,22 +150,24 @@ const SignInSignUp: React.FC = () => {
             </>
           ) : (
             <>
-              <h2 className="font-bold text-green-700 mb-6">Create Account</h2>
+              <h2 className="font-bold text-better-green mb-6">
+                Create Account
+              </h2>
               <form onSubmit={handleSignUpSubmit}>
                 <div className="mb-4">
-                  <label className="block text-green-700 mb-2">Email</label>
+                  <label className="block text-better-green mb-2">Email</label>
                   <input
                     type="email"
                     name="email"
                     value={signUpData.email}
                     onChange={handleSignUpChange}
-                    className="w-full p-3 border-2 border-green-500 focus:border-green-700 focus:outline-none"
+                    className="w-full p-3 border-2 border-better-green focus:border-better-green focus:outline-none"
                     required
                   />
                 </div>
 
                 <div className="mb-4">
-                  <label className="block text-green-700 mb-2">
+                  <label className="block text-better-green mb-2">
                     Registration Number
                   </label>
                   <input
@@ -168,25 +175,27 @@ const SignInSignUp: React.FC = () => {
                     name="registrationNo"
                     value={signUpData.registrationNo}
                     onChange={handleSignUpChange}
-                    className="w-full p-3 border-2 border-green-500 focus:border-green-700 focus:outline-none"
+                    className="w-full p-3 border-2 border-better-green focus:border-better-green focus:outline-none"
                     required
                   />
                 </div>
 
                 <div className="mb-4">
-                  <label className="block text-green-700 mb-2">Password</label>
+                  <label className="block text-better-green mb-2">
+                    Password
+                  </label>
                   <input
                     type="password"
                     name="password"
                     value={signUpData.password}
                     onChange={handleSignUpChange}
-                    className="w-full p-3 border-2 border-green-500 focus:border-green-700 focus:outline-none"
+                    className="w-full p-3 border-2 border-better-green focus:border-better-green focus:outline-none"
                     required
                   />
                 </div>
 
                 <div className="mb-4">
-                  <label className="block text-green-700 mb-2">
+                  <label className="block text-better-green mb-2">
                     Confirm Password
                   </label>
                   <input
@@ -194,31 +203,33 @@ const SignInSignUp: React.FC = () => {
                     name="confirmPassword"
                     value={signUpData.confirmPassword}
                     onChange={handleSignUpChange}
-                    className="w-full p-3 border-2 border-green-500 focus:border-green-700 focus:outline-none"
+                    className="w-full p-3 border-2 border-better-green focus:border-better-green focus:outline-none"
                     required
                   />
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-green-700 mb-2">
+                  <label className="block text-better-green mb-2">
                     Instagram Handle{" "}
-                    <span className="text-green-500 text-lg">(Optional)</span>
+                    <span className="text-better-green text-lg">
+                      (Optional)
+                    </span>
                   </label>
                   <input
                     type="text"
                     name="instagramHandle"
                     value={signUpData.instagramHandle}
                     onChange={handleSignUpChange}
-                    className="w-full p-3 border-2 border-green-500 focus:border-green-700 focus:outline-none"
+                    className="w-full p-3 border-2 border-better-green focus:border-better-green focus:outline-none"
                     placeholder="@yourusername"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-green-500 text-white p-3 hover:bg-green-700 hover:cursor-pointer"
+                  className="w-full bg-better-green text-black p-3 hover:bg-white hover:cursor-pointer"
                 >
-                  Sign Up
+                  SIGN UP
                 </button>
 
                 <div className="text-center mt-4">
@@ -227,7 +238,7 @@ const SignInSignUp: React.FC = () => {
                     <button
                       type="button"
                       onClick={handleToggle}
-                      className="text-green-700 hover:text-green-500 hover:underline hover:cursor-pointer"
+                      className="text-better-green hover:text-better-green hover:underline hover:cursor-pointer"
                     >
                       Sign In
                     </button>

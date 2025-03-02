@@ -31,9 +31,11 @@ const Profile = () => {
   }, []);
   return (
     <div className="text-white px-3 lg:px-36 text-6xl flex flex-col gap-3">
-      <h2>PROFILE</h2>
+      <h2 className="opacity-0 sm:opacity-100">PROFILE</h2>
       <SignInSignUp />
-      {/* {profileData && (
+
+      {/* I've already Configured the Instagram JSON data type, just take the response into profileData*/}
+      {profileData && (
         <>
           <h4 className="text-4xl">{profileData.user.full_name}</h4>
           <h4 className="text-xl">{profileData.user.biography}</h4>
@@ -41,7 +43,7 @@ const Profile = () => {
           <h4 className="text-2xl">Rank:{}</h4>
           <h4 className="text-2xl">Points:{}</h4>
         </>
-      )} */}
+      )}
     </div>
   );
 };

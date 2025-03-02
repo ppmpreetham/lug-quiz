@@ -17,7 +17,7 @@ const QuestionCard = ({ question }: { question: Question }) => {
           className={`text-lg sm:text-xl lg:text-2xl ${(() => {
             switch (question.difficulty?.toLowerCase()) {
               case "easy":
-                return "text-green-500";
+                return "text-better-green";
               case "medium":
                 return "text-yellow-500";
               case "hard":
@@ -35,7 +35,7 @@ const QuestionCard = ({ question }: { question: Question }) => {
         {question.options.map((option, index) => (
           <li
             key={index}
-            className={`border border-white p-2 my-2 sm:my-3 lg:my-4 ${question.answer != null && question.answer - 1 === index ? "bg-green-600 text-black" : ""}`}
+            className={`border border-white p-2 my-2 sm:my-3 lg:my-4 ${question.answer != null && question.answer - 1 === index ? "bg-better-green text-black" : ""}`}
           >
             {option}
           </li>

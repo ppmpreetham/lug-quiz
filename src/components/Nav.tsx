@@ -40,19 +40,19 @@ const Nav = () => {
         >
           <Link
             to="/leaderboard"
-            className="text-white text-lg hover:text-green-500"
+            className="text-white text-lg hover:text-better-green"
           >
             Leaderboard
           </Link>
           <Link
             to="/questions"
-            className="text-white text-lg hover:text-green-500"
+            className="text-white text-lg hover:text-better-green"
           >
             Questions
           </Link>
           <Link
             to="/profile"
-            className="text-white text-lg hover:text-green-500"
+            className="text-white text-lg hover:text-better-green"
           >
             Profile
           </Link>
