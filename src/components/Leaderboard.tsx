@@ -2,9 +2,27 @@ import { User } from "../types";
 
 const Leaderboard = () => {
   const leaderboardData: User[] = [
-    { rank: 1, username: "user1", points: 100 },
-    { rank: 2, username: "user2", points: 90 },
-    { rank: 3, username: "user3", points: 80 },
+    {
+      rank: 1,
+      username: "user1",
+      points: 100,
+      name: "",
+      regNo: "",
+    },
+    {
+      rank: 2,
+      username: "user2",
+      points: 90,
+      name: "",
+      regNo: "",
+    },
+    {
+      rank: 3,
+      username: "user3",
+      points: 80,
+      name: "",
+      regNo: "",
+    },
   ];
 
   return (
