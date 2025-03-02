@@ -1,5 +1,8 @@
 @import "tailwindcss";
-@config "../tailwind.config.js";
+
+@theme {
+  --color-enigma-green: #23ec08;
+}
 
 @font-face {
   font-family: "departure";
