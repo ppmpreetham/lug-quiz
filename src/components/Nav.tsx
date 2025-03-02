@@ -38,13 +38,22 @@ const Nav = () => {
         <div
           className={`flex-col md:flex md:flex-row gap-8 uppercase ${isOpen ? "flex" : "hidden"}`}
         >
-          <Link to="/leaderboard" className="text-white text-lg">
+          <Link
+            to="/leaderboard"
+            className="text-white text-lg hover:text-green-500"
+          >
             Leaderboard
           </Link>
-          <Link to="/questions" className="text-white text-lg">
+          <Link
+            to="/questions"
+            className="text-white text-lg hover:text-green-500"
+          >
             Questions
           </Link>
-          <Link to="/profile" className="text-white text-lg">
+          <Link
+            to="/profile"
+            className="text-white text-lg hover:text-green-500"
+          >
             Profile
           </Link>
         </div>
