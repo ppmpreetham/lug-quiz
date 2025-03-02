@@ -61,7 +61,10 @@ const SignInSignUp: React.FC = () => {
 
   return (
     <div className="flex justify-center min-h-screen text-2xl w-full items-start uppercase">
-      <div className="w-full max-w-md bg-black border-2 border-better-green">
+      <div
+        className="w-full max-w-md bg-black border-2 border-better-green box-shadow-green"
+        style={{ boxShadow: "-10px 0 15px -5px rgba(0, 255, 0, 0.3)" }}
+      >
         <div className="flex">
           <button
             className={`w-1/2 py-3 text-center border-b-2 border-better-green ${

@@ -11,7 +11,7 @@ const Nav = () => {
   return (
     <nav className="bg-black p-4 w-full overflow-x-hidden">
       <div className="flex justify-between items-center max-w-screen-xl mx-auto">
-        <Link to="/" className="text-white text-4xl md:text-2xl">
+        <Link to="/" className="text-better-green text-4xl md:text-2xl">
           LUGQUIZ
         </Link>
         <div className="md:hidden">

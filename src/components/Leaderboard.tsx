@@ -27,16 +27,16 @@ const Leaderboard = () => {
 
   return (
     <div className="text-white p-4 sm:px-8 lg:px-32">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl mb-4 text-better-green">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-4 text-white md:text-better-green">
         LEADERBOARD
-      </h1>
+      </h2>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-black">
           <thead>
-            <tr className="border-y text-black bg-white">
+            <tr className="border-y text-black bg-better-green">
               <th className="py-2 px-4 border-white">#</th>
-              <th className="py-2 px-4 border-white">username</th>
-              <th className="py-2 px-4 border-white">points</th>
+              <th className="py-2 px-4 border-white">USERNAME</th>
+              <th className="py-2 px-4 border-white">POINTS</th>
             </tr>
           </thead>
           <tbody>
